@@ -6,7 +6,7 @@
 /*   By: ludovictrombert <ludovictrombert@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 19:55:50 by pierremoret       #+#    #+#             */
-/*   Updated: 2022/09/12 21:22:43 by ludovictrom      ###   ########.fr       */
+/*   Updated: 2022/09/12 21:40:18 by ludovictrom      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,35 +39,15 @@ int	main(int argc, char **argv)
 	printf("%d tail->prev\n", list_a->tail->prev->data);
 	printf("%d tail\n", list_a->tail->data);
 	
-	/* insert_top(list_a, 11);
-	insert_top(list_a, 2);
-	insert_top(list_a, 8);
-	insert_top(list_a, 5); */
-	/* insert_top(list_a, 10);
-	insert_top(list_a, 63);
-	insert_top(list_a, 79); */
-
-
-	/* insert_top(list_b, list_a->top->data);
-	insert_top(list_b, list_a->top->next->data); */
-	/* rotate_a(list_a);
-	display_list(list_a);
-	rev_rotate_a(list_a);
-	display_list(list_a);
-	swap_a(list_a);
+	
+	/* printf("\nSwap a:\n",swap_a(list_a));
 	display_list(list_a); */
-
 	
-
+	printf("\nRotate a:\n",rotate_a(list_a));
+	display_list(list_a);
 	
-	//display_list(list_b);
-	/* swap_a(list);
-	display_list(list);
-	rotate_a(list);
-	
-	display_list(list);
-	rev_rotate_a(list);
-	display_list(list); */
+	/* printf("\nReverse Rotate a:\n",rev_rotate_a(list_a));
+	display_list(list_a); */
 
 	return (0);
 }
