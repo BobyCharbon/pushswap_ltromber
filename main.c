@@ -6,7 +6,7 @@
 /*   By: ludovictrombert <ludovictrombert@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 19:55:50 by pierremoret       #+#    #+#             */
-/*   Updated: 2022/09/12 21:19:40 by ludovictrom      ###   ########.fr       */
+/*   Updated: 2022/09/12 21:22:43 by ludovictrom      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,11 @@ int	main(int argc, char **argv)
 	(void) argv;
 	list_a = init();
 	//list_b = init();
-	insert_bot(list_a, 1);
-	insert_bot(list_a, 2);
-	insert_bot(list_a, 3);
-	insert_bot(list_a, 4);
-	insert_bot(list_a, 5);
+	insert_data(list_a, 1);
+	insert_data(list_a, 2);
+	insert_data(list_a, 3);
+	insert_data(list_a, 4);
+	insert_data(list_a, 5);
 	
 	display_list(list_a);
 	printf("%d head\n", list_a->head->data);

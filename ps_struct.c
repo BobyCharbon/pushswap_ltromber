@@ -6,7 +6,7 @@
 /*   By: ludovictrombert <ludovictrombert@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 18:50:40 by pierremoret       #+#    #+#             */
-/*   Updated: 2022/09/12 21:11:07 by ludovictrom      ###   ########.fr       */
+/*   Updated: 2022/09/12 21:22:42 by ludovictrom      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ void	insert_top(t_stack *stack,int data)
 	stack->head = insert;
 }
 
-void	insert_bot(t_stack *stack,int data)
+void	insert_data(t_stack *stack,int data)
 {
 	t_node	*insert;
 	insert = new_node(data);

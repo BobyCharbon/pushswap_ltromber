@@ -6,7 +6,7 @@
 /*   By: ludovictrombert <ludovictrombert@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 18:50:49 by pierremoret       #+#    #+#             */
-/*   Updated: 2022/09/12 18:51:14 by ludovictrom      ###   ########.fr       */
+/*   Updated: 2022/09/12 21:22:39 by ludovictrom      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ t_node	*new_node(int data);
 t_stack	*new_stack(void);
 void	insert_top(t_stack *stack,int data);
 void	display_list(t_stack *stack);
-void	insert_bot(t_stack *stack,int data);
+void	insert_data(t_stack *stack,int data);
 t_stack	swap_a(t_stack *stack);
 t_stack	rotate_a(t_stack *stack);
 t_stack	rev_rotate_a(t_stack *stack);
