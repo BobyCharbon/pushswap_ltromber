@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ps_utils.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pierremoretton <pierremoretton@student.    +#+  +:+       +#+        */
+/*   By: ludovictrombert <ludovictrombert@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 16:59:48 by pierremoret       #+#    #+#             */
-/*   Updated: 2022/08/23 18:01:52 by pierremoret      ###   ########.fr       */
+/*   Updated: 2022/09/12 18:59:44 by ludovictrom      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	is_sorted(t_stack *stack)
 	while (i == 0)
 	{
 
-		if (stack->top->data < stack->top->next->data && stack->top->data > stack->bot->data)
+		if (stack->head->data < stack->head->next->data && stack->head->data > stack->tail->data)
 		{
 			i = is_sorted(stack);
 			

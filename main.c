@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pierremoretton <pierremoretton@student.    +#+  +:+       +#+        */
+/*   By: ludovictrombert <ludovictrombert@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 19:55:50 by pierremoret       #+#    #+#             */
-/*   Updated: 2022/09/12 17:26:23 by pierremoret      ###   ########.fr       */
+/*   Updated: 2022/09/12 19:45:21 by ludovictrom      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int	main(int argc, char **argv)
 	(void) argv;
 	list_a = init();
 	//list_b = init();
+	// insert_bot(list_a, 10);
 	insert_top(list_a, 11);
 	insert_top(list_a, 2);
 	insert_top(list_a, 8);

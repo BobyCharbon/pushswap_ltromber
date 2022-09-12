@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pierremoretton <pierremoretton@student.    +#+  +:+       +#+        */
+/*   By: ludovictrombert <ludovictrombert@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 18:50:49 by pierremoret       #+#    #+#             */
-/*   Updated: 2022/08/23 17:13:16 by pierremoret      ###   ########.fr       */
+/*   Updated: 2022/09/12 18:51:14 by ludovictrom      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ typedef struct s_node {
 }	t_node;
 
 typedef struct s_stack {
-	struct s_node	*top;
-	struct s_node	*bot;
+	struct s_node	*head;
+	struct s_node	*tail;
 }	t_stack;
 
 t_stack	*init();
