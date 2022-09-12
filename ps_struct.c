@@ -6,7 +6,7 @@
 /*   By: ludovictrombert <ludovictrombert@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 18:50:40 by pierremoret       #+#    #+#             */
-/*   Updated: 2022/09/12 19:31:09 by ludovictrom      ###   ########.fr       */
+/*   Updated: 2022/09/12 21:11:07 by ludovictrom      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,10 +81,16 @@ void	insert_bot(t_stack *stack,int data)
 	t_node	*insert;
 	insert = new_node(data);
 
-	insert->next = NULL;
-	insert->prev = stack->tail;
-	stack->tail->next = insert;
-	stack->head = insert;
+	if (stack->head == NULL)
+	{
+		stack->head = insert;
+	}
+	else
+	{
+		stack->tail->next = insert;
+		insert->prev = stack->tail;
+	}
+	stack->tail = insert;
 }
 
 t_stack	swap_a(t_stack *stack)
