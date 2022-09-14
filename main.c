@@ -8,13 +8,18 @@ int	main(int argc, char **argv)
 	t_node	*temp;
 	int	i = 0;
 	int	retour = 0;
+	if (argc < 2)
+	{
+		printf("Pas assez d'argument");
+		return(0);
+	}
 
 
-
-	(void) argc;
-	(void) argv;
+	/* (void) argc;
+	(void) argv; */
 	list_a = init();
 	list_b = init();
+	parsing(list_a, argc, argv);
 	/* insert_top(list_a, 10);
 	insert_top(list_a, 63);
 	insert_top(list_a, 79); */
@@ -28,7 +33,7 @@ int	main(int argc, char **argv)
 	insert_data(list_a, 12);
 	insert_data(list_a, 15 );*/
 	
-	insert_data(list_a, 12, 0);
+	/* insert_data(list_a, 12, 0);
 	insert_data(list_a, 2, 0);
 	insert_data(list_a, 6, 0);
 	insert_data(list_a, -8, 0);
@@ -39,12 +44,14 @@ int	main(int argc, char **argv)
 	insert_data(list_a, 98, 0);
 	insert_data(list_a, 92, 0);
 	insert_data(list_a, 94, 0);
-	insert_data(list_a, 96, 0);
-	display_list(list_a);
+	insert_data(list_a, 96, 0); */
+	display_pos(list_a);
 	// rev_rotate_a(list_a);
 	// display_list(list_a);
-	rotate_a(list_a);
-	display_list(list_a);
+	set_pos(list_a);
+	// rotate_a(list_a);
+	tri_selectif(list_a, list_b);
+	display_pos(list_a);
 	// set_pos(list_a);
 	
 

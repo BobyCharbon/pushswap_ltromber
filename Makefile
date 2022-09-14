@@ -1,4 +1,4 @@
-SRCS = ps_struct.c rotate.c swap.c main.c
+SRCS = ps_struct.c rotate.c swap.c main.c parsing.c sort.c
 
 HEADERS += push_swap.h
 
