@@ -1,4 +1,4 @@
-SRCS = ps_struct.c rotate.c swap.c main.c parsing.c sort.c
+SRCS = ps_struct.c rotate.c swap.c main.c parsing.c sort.c display.c push.c init.c
 
 HEADERS += push_swap.h
 
@@ -32,7 +32,12 @@ fclean: clean
 	$(RM) $(NAME)
 
 out:
-	$(CC) -g $(CFLAGS) $(SRCS) && ./a.out
+	$(CC) -g $(CFLAGS) $(SRCS) && ./a.out 
+
+a:	fclean
+	$(RM) a.out
+	$(MAKE)
+	$(CC) -g $(CFLAGS) $(SRCS)
 
 cleanout:
 	$(RM) a.out
