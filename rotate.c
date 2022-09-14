@@ -13,23 +13,6 @@
 
 #include "push_swap.h"
 
-/* t_stack	rotate_a(t_stack *stack)
-{
-	t_node	*temp;
-	if (stack->head == NULL || stack->head->next == NULL)
-	{
-		return (*stack);
-	}
-	temp = stack->head->next;
-	stack->tail->next = stack->head;
-	stack->head->prev = stack->tail;
-	stack->head->next = NULL;
-	stack->tail = stack->head;
-	stack->head = temp;
-	printf("\nra\n");
-	return (*stack);
-} */
-
 t_stack	rotate_a(t_stack *stack)
 {
 	t_node	*temp;
@@ -68,26 +51,8 @@ void rotate_both(t_stack *list_a, t_stack *list_b)
 {
 	rotate_a(list_a);
 	rotate_b(list_b);
-	printf("\nrboth\n");
+	printf("\nrr\n");
 }
-
-/* t_stack	rev_rotate_a(t_stack *stack)
-{
-	t_node	*temp1;
-	t_node	*temp2;
-	
-	temp1 = stack->head;
-	temp2 = stack->tail->prev;
-
-	stack->head = stack->tail;
-	stack->head->next = temp1;
-	stack->head->prev = NULL;
-
-	stack->tail = temp2;
-	stack->tail->next = NULL;
-	printf("\nrra\n");
-	return (*stack);
-} */
 
 t_stack	rev_rotate_a(t_stack *stack)
 {
@@ -123,5 +88,5 @@ void	rev_rotate_both(t_stack *list_a, t_stack *list_b)
 {
 	rev_rotate_a(list_a);
 	rev_rotate_b(list_b);
-	printf("\nrrboth\n");
+	printf("\nrrr\n");
 }

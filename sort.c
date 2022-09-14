@@ -6,7 +6,7 @@
 /*   By: ludovictrombert <ludovictrombert@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 19:48:15 by ludovictrom       #+#    #+#             */
-/*   Updated: 2022/09/14 19:49:47 by ludovictrom      ###   ########.fr       */
+/*   Updated: 2022/09/14 20:13:11 by ludovictrom      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,5 @@ void	tri_selectif(t_stack *list_a, t_stack *list_b)
 			nb_operation += 1;
 		}
 	}
-	printf("\nNombre d'opérations = %d\n", nb_operation);
+	printf("\n\nNombre d'opérations = %d\n", nb_operation);
 }

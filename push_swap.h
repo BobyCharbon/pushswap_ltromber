@@ -6,10 +6,9 @@
 /*   By: ludovictrombert <ludovictrombert@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 12:25:34 by ludovictrom       #+#    #+#             */
-/*   Updated: 2022/09/14 19:49:17 by ludovictrom      ###   ########.fr       */
+/*   Updated: 2022/09/14 20:34:54 by ludovictrom      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
@@ -31,14 +30,15 @@ typedef struct s_stack {
 }	t_stack;
 
 t_stack	*init();
+
 t_node	*new_node(int data, int pos);
 t_stack	*new_stack(void);
 void	insert_top(t_stack *stack,int data, int pos);
 void	display_list(t_stack *stack);
 void	insert_data(t_stack *stack,int data, int pos);
 
-void	push_b(t_stack *list_a, t_stack *list_b);
 void	push_a(t_stack *list_a, t_stack *list_b);
+void	push_b(t_stack *list_a, t_stack *list_b);
 
 t_stack	swap_a(t_stack *stack);
 t_stack	swap_b(t_stack *stack);
@@ -56,11 +56,14 @@ int 	moyenne(t_stack *list_a);
 void	tri(t_stack *list_a);
 int	is_sorted(t_stack *list_a);
 int	is_sorted(t_stack *stack);
-void	display_pos(t_stack *stack);
 int	list_size(t_stack *stack);
 void	set_pos(t_stack *list_a);
 
 t_stack *parsing(t_stack *stack, int agrc, char **argv);
+void *parsing_split(t_stack *stack, int argc, char **argv);
+int is_correct(char *string);
 
 void	tri_selectif(t_stack *list_a, t_stack *list_b);
+
+void	display_pos(t_stack *stack);
 #endif

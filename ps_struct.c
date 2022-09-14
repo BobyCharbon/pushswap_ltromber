@@ -6,25 +6,11 @@
 /*   By: ludovictrombert <ludovictrombert@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 12:23:54 by ludovictrom       #+#    #+#             */
-/*   Updated: 2022/09/14 19:48:49 by ludovictrom      ###   ########.fr       */
+/*   Updated: 2022/09/14 20:19:52 by ludovictrom      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "push_swap.h"
-
-t_stack	*init()
-{
-	t_stack	*newstack;
-	newstack = new_stack();
-	
-	if (newstack == NULL )
-		return (NULL);
-	
-	newstack->head = NULL;
-	newstack->tail = NULL;
-	return (newstack);
-}
 
 t_stack	*new_stack(void)
 {
@@ -76,23 +62,6 @@ void	insert_top(t_stack *stack,int data, int pos)
 	stack->tail = insert;
 }
 
-/* void	insert_bot(t_stack *stack,int data)
-{
-	t_node	*insert;
-	insert = new_node(data);
-	insert->next = stack->tail;
-	if (stack->head == NULL)
-	{
-		stack->head = insert;
-	}
-	else
-		insert->prev = stack->head;
-	
-	insert = stack->tail->next;
-	stack->tail = insert;
-	insert->next = NULL;
-} */
-
 void	insert_data(t_stack *stack, int data, int pos)
 {
 	t_node	*insert;
@@ -109,51 +78,6 @@ void	insert_data(t_stack *stack, int data, int pos)
 		insert->prev = stack->tail;
 	}
 	stack->tail = insert;	
-}
-
-void	push_b(t_stack *list_a, t_stack *list_b)
-{
-	t_node	*temp1;
-	t_node	*temp2;
-	int	i;
-	int	j;
-	
-	i = 0;
-	j = 0;
-	temp1 = list_a->tail;
-	i = temp1->data;
-	j = temp1->pos;
-
-	insert_data(list_b, i, j);
-
-	list_a->tail = list_a->tail->prev;
-	list_a->tail->next = NULL;
-	free(temp1);
-}
-
-void	push_a(t_stack *list_a, t_stack *list_b)
-{
-	t_node	*temp1;
-	t_node	*temp2;
-	int	i;
-	int	j;
-	
-	i = 0;
-	j = 0;
-	temp1 = list_b->tail->prev;
-	i = list_b->tail->data;
-	j = list_b->tail->pos;
-
-	insert_data(list_a, i, j);
-
-	list_b->tail = temp1;
-	if (temp1 == NULL)
-	{
-		list_b->head = NULL;
-	}
-	
-	printf("\npa\n");
-	free(temp1);
 }
 
 void	set_pos(t_stack *list_a)
@@ -209,24 +133,6 @@ int 	moyenne(t_stack *list_a)
 	return (moy);
 }
 
-/* void	tri(t_stack *list_a)
-{
-	int	count = 0;
-
-	while (count != 5)
-	{
-		if (list_a->head->data < list_a->head->next->data)
-		{
-			rotate(list_a);
-		}
-		if (list_a->head->data > list_a->head->next->data)
-		{
-			swap_a(list_a);
-		}
-		count++;
-	}
-} */
-
 int	is_sorted(t_stack *list_a)
 {
 	t_node	*temp = list_a->head;
@@ -243,21 +149,6 @@ int	is_sorted(t_stack *list_a)
 	return (1);
 }
 
-/* void	display_list(t_stack *stack)
-{
-	t_node	*temp;
-
-	temp = stack->head;
-
-	while (temp->next != NULL)
-	{
-		printf("%d\n", temp->data);
-		temp = temp->next;
-	}
-	printf("%d\n", temp->data);
-	printf("\n");
-} */
-
 void	display_list(t_stack *stack)
 {
 	t_node	*temp;
@@ -273,20 +164,6 @@ void	display_list(t_stack *stack)
 	printf("\n");
 }
 
-void	display_pos(t_stack *stack)
-{
-	t_node	*temp;
-
-	temp = stack->tail;
-
-	while (temp->prev != NULL)
-	{
-		printf("%d [%d]\n", temp->data, temp->pos);
-		temp = temp->prev;
-	}
-	printf("%d [%d]\n", temp->data, temp->pos);
-	printf("\n");
-}
 
 int	list_size(t_stack *stack)
 {
