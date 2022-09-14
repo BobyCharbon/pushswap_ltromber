@@ -6,7 +6,7 @@
 /*   By: ludovictrombert <ludovictrombert@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 22:32:20 by pierremoret       #+#    #+#             */
-/*   Updated: 2022/09/14 17:46:16 by ludovictrom      ###   ########.fr       */
+/*   Updated: 2022/09/14 17:48:08 by ludovictrom      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,7 +104,7 @@ t_stack	rev_rotate_a(t_stack *stack)
 	return (*stack);
 }
 
-t_stack	rev_rotate_a(t_stack *stack)
+t_stack	rev_rotate_b(t_stack *stack)
 {
 	t_node *temp1;
 	t_node *temp2;
