@@ -34,13 +34,16 @@ int	main(int argc, char **argv)
 	insert_data(list_a, -8, 0);
 	insert_data(list_a, 40, 0);
 	insert_data(list_a, 67, 0);
+	insert_data(list_a, 67, 0);
 	insert_data(list_a, 95, 0);
 	insert_data(list_a, 98, 0);
 	insert_data(list_a, 92, 0);
 	insert_data(list_a, 94, 0);
 	insert_data(list_a, 96, 0);
 	display_list(list_a);
-	rev_rotate_a(list_a);
+	// rev_rotate_a(list_a);
+	// display_list(list_a);
+	rotate_a(list_a);
 	display_list(list_a);
 	// set_pos(list_a);
 	

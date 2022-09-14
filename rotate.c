@@ -6,7 +6,7 @@
 /*   By: ludovictrombert <ludovictrombert@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 22:32:20 by pierremoret       #+#    #+#             */
-/*   Updated: 2022/09/14 17:48:08 by ludovictrom      ###   ########.fr       */
+/*   Updated: 2022/09/14 18:31:444 by ludovictrom      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,7 +115,7 @@ t_stack	rev_rotate_b(t_stack *stack)
 	temp1->prev = NULL;
 	stack->tail = stack->head;
 	temp1 = stack->head;
-	printf("\nrra\n");
+	printf("\nrrb\n");
 	return (*stack);
 }
 
