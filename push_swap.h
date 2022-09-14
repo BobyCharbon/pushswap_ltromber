@@ -6,7 +6,7 @@
 /*   By: ludovictrombert <ludovictrombert@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 12:25:34 by ludovictrom       #+#    #+#             */
-/*   Updated: 2022/09/14 12:25:35 by ludovictrom      ###   ########.fr       */
+/*   Updated: 2022/09/14 18:12:21 by ludovictrom      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 
 #include<stdio.h>
 #include<stdlib.h>
+#include "..libft/libft.h"
 
 typedef struct s_node {
 	int	data;
