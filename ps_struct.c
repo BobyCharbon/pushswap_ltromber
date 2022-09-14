@@ -6,7 +6,7 @@
 /*   By: ludovictrombert <ludovictrombert@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 12:23:54 by ludovictrom       #+#    #+#             */
-/*   Updated: 2022/09/14 18:09:33 by ludovictrom      ###   ########.fr       */
+/*   Updated: 2022/09/14 19:48:49 by ludovictrom      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -286,48 +286,6 @@ void	display_pos(t_stack *stack)
 	}
 	printf("%d [%d]\n", temp->data, temp->pos);
 	printf("\n");
-}
-
-void	tri_selectif(t_stack *list_a, t_stack *list_b)
-{
-	int	pos_max;
-	int	nb_bit;
-	int	count;
-	int	count_bit;
-
-	nb_bit = 0;
-	count = 0;
-	count_bit = 0;
-	
-	pos_max = list_size(list_a) - 1;
-	printf("pos max = %d\n", pos_max);
-	while ((pos_max >> nb_bit) != 0)
-		nb_bit++;
-	while (count_bit < nb_bit)
-	{
-		printf("nbbit %d\n", nb_bit);
-		while (count < pos_max)
-		{
-			if ((list_a->tail->pos >> count_bit) & 1)
-			{
-				rotate_a(list_a);
-				display_pos(list_a);
-				
-			}
-			else
-			{
-				push_b(list_a, list_b);
-				display_pos(list_b);
-			}
-			count++;
-			printf("\n Valeur de count %d \n", count);
-		}
-		count_bit++;
-		count = 0;
-		printf("bit %d\n", count_bit);
-		while (list_b->head != NULL)
-			push_a(list_a, list_b);
-	}
 }
 
 int	list_size(t_stack *stack)

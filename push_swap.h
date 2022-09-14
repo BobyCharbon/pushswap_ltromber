@@ -6,7 +6,7 @@
 /*   By: ludovictrombert <ludovictrombert@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 12:25:34 by ludovictrom       #+#    #+#             */
-/*   Updated: 2022/09/14 18:33:21 by ludovictrom      ###   ########.fr       */
+/*   Updated: 2022/09/14 19:49:17 by ludovictrom      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,10 @@ void	tri(t_stack *list_a);
 int	is_sorted(t_stack *list_a);
 int	is_sorted(t_stack *stack);
 void	display_pos(t_stack *stack);
-void	tri_selectif(t_stack *list_a, t_stack *list_b);
 int	list_size(t_stack *stack);
 void	set_pos(t_stack *list_a);
+
+t_stack *parsing(t_stack *stack, int agrc, char **argv);
+
+void	tri_selectif(t_stack *list_a, t_stack *list_b);
 #endif
