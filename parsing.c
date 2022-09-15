@@ -6,7 +6,7 @@
 /*   By: ludovictrombert <ludovictrombert@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 19:15:18 by ludovictrom       #+#    #+#             */
-/*   Updated: 2022/09/14 21:11:23 by ludovictrom      ###   ########.fr       */
+/*   Updated: 2022/09/15 13:23:08 by ludovictrom      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ t_stack *parsing(t_stack *stack, int argc, char **argv)
 	{
 		while (i < argc)
 		{
-			insert_data(stack, atoi(argv[i]), 0);
+			insert_data(stack, ft_atoi(argv[i]), 0);
+			ft_printf("salut");
 			i++;
 		}
 	}

@@ -31,7 +31,6 @@ int	main(int argc, char **argv)
 	insert_data(list_a, 98, 0);
 	insert_data(list_a, 92, 0);
 	insert_data(list_a, 94, 0); */
-	
 	parsing(list_a, argc, argv);
 	display_pos(list_a);
 	set_pos(list_a);
